@@ -1,0 +1,87 @@
+/* ========================================
+   INPUT COMPONENT STYLES
+   ======================================== */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.input-label {
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+}
+
+.input-required {
+  color: var(--color-error);
+  margin-left: 2px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: var(--space-md);
+  display: flex;
+  align-items: center;
+  color: var(--text-tertiary);
+  font-size: var(--font-lg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.7rem var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  font-size: var(--font-base);
+  transition: all var(--transition-fast);
+}
+
+.input-field::placeholder {
+  color: var(--text-tertiary);
+}
+
+.input-field:focus {
+  border-color: var(--color-primary);
+  background: var(--bg-glass);
+  box-shadow: 0 0 0 3px var(--color-primary-50);
+}
+
+.input-field:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-with-icon {
+  padding-left: 2.75rem;
+}
+
+.input-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Error state */
+.input-error .input-field {
+  border-color: var(--color-error);
+}
+
+.input-error .input-field:focus {
+  box-shadow: 0 0 0 3px var(--color-error-bg);
+}
+
+.input-error-text {
+  font-size: var(--font-xs);
+  color: var(--color-error);
+  margin-top: 2px;
+}

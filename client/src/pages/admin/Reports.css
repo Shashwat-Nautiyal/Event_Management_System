@@ -1,0 +1,182 @@
+/* ========================================
+   REPORTS PAGE STYLES
+   ======================================== */
+
+/* ---- Date Filter ---- */
+.report-date-filter {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.report-date-inputs {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.report-date-inputs .input-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* ---- Summary Stats ---- */
+.report-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.report-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-xl);
+  gap: var(--space-sm);
+}
+
+.report-stat-value {
+  font-size: var(--font-3xl);
+  font-weight: var(--font-weight-extrabold);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.report-stat-label {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+/* ---- Sections ---- */
+.report-section {
+  margin-bottom: var(--space-2xl);
+}
+
+/* ---- Bar Charts ---- */
+.report-bars {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.report-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.report-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-sm);
+}
+
+.report-bar-status {
+  text-transform: capitalize;
+  font-weight: var(--font-weight-medium);
+}
+
+.report-bar-count {
+  color: var(--text-secondary);
+}
+
+.report-bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-glass);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.report-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* ---- Top Events ---- */
+.report-top-events {
+  padding: 0;
+  overflow: hidden;
+}
+
+.report-top-event {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-sm);
+}
+
+.report-top-event:last-child {
+  border-bottom: none;
+}
+
+.report-top-event-rank {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-50);
+  color: var(--color-primary-light);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-sm);
+  flex-shrink: 0;
+}
+
+.report-top-event-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.report-top-event-info strong {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.report-top-event-date {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.report-top-event-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-xs);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .report-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .report-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .report-date-inputs {
+    flex-direction: column;
+  }
+
+  .report-top-event {
+    flex-wrap: wrap;
+  }
+}

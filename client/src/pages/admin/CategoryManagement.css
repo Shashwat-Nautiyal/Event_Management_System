@@ -1,0 +1,107 @@
+/* ========================================
+   CATEGORY MANAGEMENT STYLES
+   ======================================== */
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.cat-card {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cat-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  font-size: 1.5rem;
+}
+
+.cat-card-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.cat-card-name {
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cat-card-desc {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.cat-card-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+/* ---- Picker Grid ---- */
+.cat-picker-grid {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-xs);
+}
+
+.cat-picker-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cat-picker-item:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-color-hover);
+}
+
+.cat-picker-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-50);
+  box-shadow: 0 0 0 2px var(--color-primary-50);
+}
+
+.cat-color-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cat-color-item:hover {
+  transform: scale(1.15);
+}
+
+.cat-color-active {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px var(--bg-primary), 0 0 0 5px currentColor;
+}

@@ -1,5 +1,41 @@
+<<<<<<< HEAD
 node_modules/
 .env
 dist/
 build/
 .DS_Store
+=======
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Build output
+client/dist/
+build/
+
+# Uploads
+server/uploads/*
+!server/uploads/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Firebase
+firebase-service-account.json
+>>>>>>> 8a4d4f9 (intial client and server files)

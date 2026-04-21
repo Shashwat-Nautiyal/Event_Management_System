@@ -1,0 +1,47 @@
+/* ========================================
+   USER MANAGEMENT STYLES
+   ======================================== */
+
+.users-table-wrapper {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.user-cell-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  flex-shrink: 0;
+}
+
+.user-role-select {
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--font-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.user-role-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-50);
+}
+
+.user-role-select:hover {
+  border-color: var(--border-color-hover);
+}

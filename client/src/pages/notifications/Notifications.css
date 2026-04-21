@@ -1,0 +1,59 @@
+/* ========================================
+   NOTIFICATIONS STYLES
+   ======================================== */
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  cursor: pointer;
+  position: relative;
+}
+
+.notif-unread {
+  border-left: 3px solid var(--color-primary);
+}
+
+.notif-type-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.notif-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-title {
+  font-size: var(--font-sm);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.notif-message {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.notif-time {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.notif-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 6px;
+}

@@ -1,0 +1,71 @@
+/* ========================================
+   SEND NOTIFICATION STYLES
+   ======================================== */
+
+.send-notif-card {
+  padding: var(--space-2xl);
+}
+
+.send-notif-header {
+  margin-bottom: var(--space-xl);
+}
+
+.send-notif-info {
+  margin-top: var(--space-sm);
+}
+
+.send-notif-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ---- Templates ---- */
+.send-notif-templates {
+  margin-top: var(--space-sm);
+}
+
+.send-notif-templates-label {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.send-notif-templates-grid {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ---- Success ---- */
+.send-notif-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-2xl);
+  gap: var(--space-sm);
+}
+
+.send-notif-success-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.send-notif-success h3 {
+  font-size: var(--font-xl);
+  color: var(--color-success);
+}
+
+.send-notif-success p {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.send-notif-success-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
