@@ -2,7 +2,7 @@ const {
   generateTicketId,
   generateQRData,
   verifyQRData
-} = require('../src/services/qr.service');
+} = require('../../server/src/services/qr.service');
 
 describe('QR Service Unit Tests', () => {
   it('should generate a valid ticket ID format', () => {

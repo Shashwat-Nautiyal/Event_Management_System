@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
-const tokenUtils = require('../../src/utils/generateToken');
+const tokenUtils = require('../../server/src/utils/generateToken');
 
 // Mock the environment variables so tests are predictable and don't rely on the .env file
-jest.mock('../../src/config/env', () => ({
+jest.mock('../../server/src/config/env', () => ({
   JWT_SECRET: 'test-secret',
   JWT_REFRESH_SECRET: 'test-refresh-secret',
   JWT_EXPIRE: '1h',

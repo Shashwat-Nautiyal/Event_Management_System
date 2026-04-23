@@ -1,8 +1,8 @@
 const request = require('supertest');
-const app = require('../src/app');
-const User = require('../src/models/User');
-const Event = require('../src/models/Event');
-const Category = require('../src/models/Category');
+const app = require('../../server/src/app');
+const User = require('../../server/src/models/User');
+const Event = require('../../server/src/models/Event');
+const Category = require('../../server/src/models/Category');
 
 describe('Registration API', () => {
   let studentToken;

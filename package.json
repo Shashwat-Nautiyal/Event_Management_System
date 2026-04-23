@@ -10,10 +10,19 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": ["event-management", "campus", "ticketing", "qr-code"],
+  "keywords": [
+    "event-management",
+    "campus",
+    "ticketing",
+    "qr-code"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "supertest": "^7.2.2"
+  },
+  "dependencies": {
+    "puppeteer": "^24.42.0"
   }
 }

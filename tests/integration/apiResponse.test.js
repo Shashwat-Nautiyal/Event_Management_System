@@ -1,4 +1,4 @@
-const ApiResponse = require('../../src/utils/apiResponse');
+const ApiResponse = require('../../server/src/utils/apiResponse');
 
 describe('ApiResponse Utility', () => {
   let mockRes;

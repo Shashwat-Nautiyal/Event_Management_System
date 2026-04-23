@@ -1,7 +1,7 @@
 const request = require('supertest');
-const app = require('../../src/app');
-const User = require('../../src/models/User');
-const Category = require('../../src/models/Category');
+const app = require('../../server/src/app');
+const User = require('../../server/src/models/User');
+const Category = require('../../server/src/models/Category');
 
 describe('Event API', () => {
   let organizerToken;
