@@ -1,172 +1,173 @@
-/* ========================================
-   ADMIN DASHBOARD STYLES
-   ======================================== */
+/**
+ * Admin Dashboard Stylesheet
+ * ----------------------------------------
+ */
 
 .admin-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
-  margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+    gap: var(--space-md);
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
 }
 
 .admin-stat-card {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  padding: var(--space-xl);
+    padding: var(--space-xl);
+    gap: var(--space-md);
+    align-items: center;
+    display: flex;
 }
 
 .admin-stat-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-lg);
-  flex-shrink: 0;
+    flex-shrink: 0;
+    border-radius: var(--radius-lg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    width: 50px;
 }
 
 .admin-stat-value {
-  font-size: var(--font-2xl);
-  font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-2xl);
 }
 
 .admin-stat-label {
-  font-size: var(--font-sm);
-  color: var(--text-secondary);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
 }
 
 .admin-section {
-  margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
 }
 
 .admin-section-title {
-  font-size: var(--font-xl);
-  margin-bottom: var(--space-lg);
-  display: flex;
-  align-items: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-xl);
 }
 
 .admin-empty {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-md);
-  padding: var(--space-2xl);
-  text-align: center;
-  color: var(--text-secondary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: var(--space-2xl);
+    gap: var(--space-md);
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
 .admin-pending-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
+    gap: var(--space-md);
+    flex-direction: column;
+    display: flex;
 }
 
 .admin-pending-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: var(--space-lg);
-  gap: var(--space-lg);
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
 }
 
 .admin-pending-info {
-  flex: 1;
-  min-width: 0;
+    min-width: 0;
+    flex: 1;
 }
 
 .admin-pending-info h3 {
-  font-size: var(--font-base);
-  margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-base);
 }
 
 .admin-pending-meta {
-  font-size: var(--font-xs);
-  color: var(--text-secondary);
-  margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-xs);
 }
 
 .admin-pending-desc {
-  font-size: var(--font-sm);
-  color: var(--text-tertiary);
+    color: var(--text-tertiary);
+    font-size: var(--font-sm);
 }
 
 .admin-pending-actions {
-  display: flex;
-  gap: var(--space-sm);
-  flex-shrink: 0;
+    flex-shrink: 0;
+    gap: var(--space-sm);
+    display: flex;
 }
 
 .admin-recent-list {
-  padding: 0;
-  overflow: hidden;
+    overflow: hidden;
+    padding: 0;
 }
 
 .admin-recent-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
-  border-bottom: 1px solid var(--border-color);
-  font-size: var(--font-sm);
+    font-size: var(--font-sm);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--space-md) var(--space-lg);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
 }
 
 .admin-recent-item:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .admin-recent-by {
-  color: var(--text-tertiary);
+    color: var(--text-tertiary);
 }
 
-@media (max-width: 1024px) {
-  .admin-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .admin-stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .admin-pending-card {
-    flex-direction: column;
-  }
-
-  .admin-quick-links {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ---- Quick Links ---- */
+/* Quick Links Section */
 .admin-quick-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
-  margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+    gap: var(--space-md);
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
 }
 
 .admin-quick-link {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  padding: var(--space-lg) var(--space-xl);
-  color: var(--text-primary);
-  text-decoration: none;
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-sm);
-  transition: all var(--transition-base);
+    transition: all var(--transition-base);
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    color: var(--text-primary);
+    padding: var(--space-lg) var(--space-xl);
+    gap: var(--space-md);
+    align-items: center;
+    display: flex;
 }
 
 .admin-quick-link:hover {
-  color: var(--color-primary-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+    color: var(--color-primary-light);
 }
 
 .admin-quick-link svg {
-  color: var(--color-primary-light);
-  flex-shrink: 0;
+    flex-shrink: 0;
+    color: var(--color-primary-light);
+}
+
+@media (max-width: 1024px) {
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-pending-card {
+        flex-direction: column;
+    }
+
+    .admin-quick-links {
+        grid-template-columns: 1fr;
+    }
 }

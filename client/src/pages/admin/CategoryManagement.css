@@ -1,100 +1,98 @@
-/* ========================================
-   CATEGORY MANAGEMENT STYLES
-   ======================================== */
+/* --- CATEGORY MANAGEMENT --- */
 
 .cat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: var(--space-md);
   margin-top: var(--space-xl);
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: grid;
 }
 
 .cat-card {
   padding: var(--space-lg);
-  display: flex;
-  flex-direction: column;
   gap: var(--space-sm);
+  flex-direction: column;
+  display: flex;
 }
 
 .cat-card-header {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .cat-card-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-lg);
   font-size: 1.5rem;
+  border-radius: var(--radius-lg);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 48px;
+  width: 48px;
 }
 
 .cat-card-color-dot {
-  width: 12px;
-  height: 12px;
   border-radius: 50%;
+  height: 12px;
+  width: 12px;
 }
 
 .cat-card-name {
-  font-size: var(--font-lg);
   font-weight: var(--font-weight-semibold);
+  font-size: var(--font-lg);
 }
 
 .cat-card-desc {
-  font-size: var(--font-sm);
   color: var(--text-secondary);
+  font-size: var(--font-sm);
   flex: 1;
 }
 
 .cat-card-actions {
-  display: flex;
-  gap: var(--space-sm);
   margin-top: var(--space-sm);
+  gap: var(--space-sm);
+  display: flex;
 }
 
-/* ---- Picker Grid ---- */
+/* Picker Grid Styles */
 .cat-picker-grid {
-  display: flex;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
   margin-top: var(--space-xs);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  display: flex;
 }
 
 .cat-picker-item {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  border-radius: var(--radius-md);
-  background: var(--bg-glass);
-  border: 2px solid var(--border-color);
-  cursor: pointer;
   transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background: var(--bg-glass);
+  border-radius: var(--radius-md);
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 40px;
 }
 
 .cat-picker-item:hover {
-  background: var(--bg-glass-hover);
   border-color: var(--border-color-hover);
+  background: var(--bg-glass-hover);
 }
 
 .cat-picker-active {
-  border-color: var(--color-primary);
-  background: var(--color-primary-50);
   box-shadow: 0 0 0 2px var(--color-primary-50);
+  background: var(--color-primary-50);
+  border-color: var(--color-primary);
 }
 
 .cat-color-item {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  cursor: pointer;
   transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
 }
 
 .cat-color-item:hover {
@@ -102,6 +100,6 @@
 }
 
 .cat-color-active {
-  border-color: var(--text-primary);
   box-shadow: 0 0 0 3px var(--bg-primary), 0 0 0 5px currentColor;
+  border-color: var(--text-primary);
 }
