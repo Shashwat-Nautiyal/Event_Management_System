@@ -1,63 +1,71 @@
 /* ========================================
    DESIGN TOKENS — Campus Events Platform
+   Warm Golden Theme
    ======================================== */
 
 :root {
   /* ---- Color Palette ---- */
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-primary-dark: #4f46e5;
-  --color-primary-50: rgba(99, 102, 241, 0.08);
-  --color-primary-100: rgba(99, 102, 241, 0.15);
+  /* Primary: deep amber/golden */
+  --color-primary: #b45309;
+  --color-primary-light: #d97706;
+  --color-primary-dark: #92400e;
+  --color-primary-50: rgba(180, 83, 9, 0.08);
+  --color-primary-100: rgba(180, 83, 9, 0.16);
 
-  --color-secondary: #8b5cf6;
-  --color-secondary-light: #a78bfa;
+  /* Secondary: warm terracotta */
+  --color-secondary: #c2410c;
+  --color-secondary-light: #ea580c;
 
-  --color-accent: #ec4899;
-  --color-accent-light: #f472b6;
+  /* Accent: deep olive/sage */
+  --color-accent: #4d7c0f;
+  --color-accent-light: #65a30d;
 
-  --color-success: #10b981;
-  --color-success-light: #34d399;
-  --color-success-bg: rgba(16, 185, 129, 0.1);
+  /* Semantic colors — adjusted for warm palette */
+  --color-success: #15803d;
+  --color-success-light: #16a34a;
+  --color-success-bg: rgba(21, 128, 61, 0.1);
 
-  --color-warning: #f59e0b;
-  --color-warning-light: #fbbf24;
-  --color-warning-bg: rgba(245, 158, 11, 0.1);
+  --color-warning: #b45309;
+  --color-warning-light: #d97706;
+  --color-warning-bg: rgba(180, 83, 9, 0.12);
 
-  --color-error: #ef4444;
-  --color-error-light: #f87171;
-  --color-error-bg: rgba(239, 68, 68, 0.1);
+  --color-error: #b91c1c;
+  --color-error-light: #dc2626;
+  --color-error-bg: rgba(185, 28, 28, 0.1);
 
-  --color-info: #3b82f6;
-  --color-info-light: #60a5fa;
-  --color-info-bg: rgba(59, 130, 246, 0.1);
+  --color-info: #1d4ed8;
+  --color-info-light: #2563eb;
+  --color-info-bg: rgba(29, 78, 216, 0.1);
 
-  /* ---- Dark Theme (default) ---- */
-  --bg-primary: #0f0f1a;
-  --bg-secondary: #1a1a2e;
-  --bg-tertiary: #16213e;
-  --bg-card: rgba(26, 26, 46, 0.8);
-  --bg-card-hover: rgba(26, 26, 46, 0.95);
-  --bg-glass: rgba(255, 255, 255, 0.05);
-  --bg-glass-hover: rgba(255, 255, 255, 0.08);
-  --bg-input: rgba(255, 255, 255, 0.06);
-  --bg-overlay: rgba(0, 0, 0, 0.6);
+  /* ---- Warm Yellow Light Theme (default) ---- */
+  --bg-primary: #fffbeb;          /* warm cream-yellow */
+  --bg-secondary: #fef3c7;        /* soft amber tint */
+  --bg-tertiary: #fde68a;         /* richer golden */
+  --bg-card: rgba(255, 251, 235, 0.92);
+  --bg-card-hover: rgba(255, 243, 199, 0.98);
+  --bg-glass: rgba(255, 251, 235, 0.55);
+  --bg-glass-hover: rgba(255, 243, 199, 0.72);
+  --bg-input: rgba(180, 83, 9, 0.05);
+  --bg-overlay: rgba(120, 53, 15, 0.45);
 
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
-  --text-inverse: #0f0f1a;
+  /* Text — deep warm browns for contrast on yellow */
+  --text-primary: #1c0a00;        /* near-black warm brown */
+  --text-secondary: #78350f;      /* medium amber-brown */
+  --text-tertiary: #a16207;       /* muted golden-brown */
+  --text-inverse: #fffbeb;
 
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-color-hover: rgba(255, 255, 255, 0.15);
+  /* Borders — warm amber tint */
+  --border-color: rgba(180, 83, 9, 0.15);
+  --border-color-hover: rgba(180, 83, 9, 0.30);
   --border-color-focus: var(--color-primary);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.15);
-  --shadow-glow-accent: 0 0 30px rgba(236, 72, 153, 0.15);
+  /* Shadows — warm amber-tinted */
+  --shadow-sm: 0 1px 3px rgba(120, 53, 15, 0.12);
+  --shadow-md: 0 4px 12px rgba(120, 53, 15, 0.14);
+  --shadow-lg: 0 8px 32px rgba(120, 53, 15, 0.16);
+  --shadow-xl: 0 16px 48px rgba(120, 53, 15, 0.20);
+  --shadow-glow: 0 0 30px rgba(217, 119, 6, 0.20);
+  --shadow-glow-accent: 0 0 30px rgba(77, 124, 15, 0.18);
 
   /* ---- Spacing ---- */
   --space-xs: 0.25rem;
@@ -119,29 +127,36 @@
   --navbar-height: 64px;
 }
 
-/* ---- Light Theme ---- */
-[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.9);
-  --bg-card-hover: rgba(255, 255, 255, 1);
-  --bg-glass: rgba(255, 255, 255, 0.7);
-  --bg-glass-hover: rgba(255, 255, 255, 0.85);
-  --bg-input: rgba(0, 0, 0, 0.04);
-  --bg-overlay: rgba(0, 0, 0, 0.4);
+/* ---- Dark Theme (opt-in) ---- */
+[data-theme="dark"] {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --bg-card: rgba(26, 26, 46, 0.8);
+  --bg-card-hover: rgba(26, 26, 46, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+  --bg-input: rgba(255, 255, 255, 0.06);
+  --bg-overlay: rgba(0, 0, 0, 0.6);
 
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-tertiary: #94a3b8;
-  --text-inverse: #f1f5f9;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  --text-inverse: #0f0f1a;
 
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-color-hover: rgba(0, 0, 0, 0.15);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-hover: rgba(255, 255, 255, 0.15);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(217, 119, 6, 0.20);
+  --shadow-glow-accent: 0 0 30px rgba(77, 124, 15, 0.15);
+
+  --color-primary: #d97706;
+  --color-primary-light: #f59e0b;
+  --color-primary-dark: #b45309;
+  --color-primary-50: rgba(217, 119, 6, 0.1);
+  --color-primary-100: rgba(217, 119, 6, 0.18);
 }

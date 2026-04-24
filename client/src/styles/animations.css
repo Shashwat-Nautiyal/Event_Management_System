@@ -91,10 +91,10 @@
 /* ---- Glow Pulse ---- */
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 15px rgba(217, 119, 6, 0.18);
   }
   50% {
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 30px rgba(217, 119, 6, 0.38);
   }
 }
 

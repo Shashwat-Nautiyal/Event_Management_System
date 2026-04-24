@@ -2,6 +2,38 @@ const Event = require('../models/Event');
 const ApiResponse = require('../utils/apiResponse');
 const { createNotification } = require('../services/notification.service');
 
+/**
+ * Check whether a venue is already booked by a pending or approved event
+ * on the same calendar day at the same startTime.
+ *
+ * @param {string} venue       - Venue name (case-insensitive)
+ * @param {Date|string} date   - The event date
+ * @param {string} startTime   - "HH:MM" string
+ * @param {string} [excludeId] - Event _id to exclude (for updates)
+ * @returns {Promise<object|null>} - The conflicting event, or null
+ */
+const checkVenueConflict = async (venue, date, startTime, excludeId = null) => {
+  // Build a [start-of-day, end-of-day] range so that date precision
+  // differences (e.g. midnight vs noon) don't cause missed conflicts
+  const dayStart = new Date(date);
+  dayStart.setUTCHours(0, 0, 0, 0);
+  const dayEnd = new Date(date);
+  dayEnd.setUTCHours(23, 59, 59, 999);
+
+  const filter = {
+    venue: { $regex: new RegExp(`^${venue.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') },
+    date: { $gte: dayStart, $lte: dayEnd },
+    startTime,
+    status: { $in: ['pending', 'approved'] },
+  };
+
+  if (excludeId) {
+    filter._id = { $ne: excludeId };
+  }
+
+  return Event.findOne(filter).select('title organizer startTime date');
+};
+
 // @desc    Create event
 // @route   POST /api/events
 const createEvent = async (req, res, next) => {
@@ -14,6 +46,22 @@ const createEvent = async (req, res, next) => {
 
     if (req.file) {
       eventData.bannerImage = `/uploads/${req.file.filename}`;
+    }
+
+    // Venue conflict check — reject if another active event occupies
+    // the same venue on the same day at the same start time
+    if (eventData.venue && eventData.date && eventData.startTime) {
+      const conflict = await checkVenueConflict(
+        eventData.venue,
+        eventData.date,
+        eventData.startTime
+      );
+      if (conflict) {
+        return ApiResponse.badRequest(
+          res,
+          `Venue "${eventData.venue}" is already booked at ${eventData.startTime} on this date`
+        );
+      }
     }
 
     const event = await Event.create(eventData);
@@ -108,6 +156,27 @@ const updateEvent = async (req, res, next) => {
     // If organizer updates an approved event, set back to pending
     if (req.user.role === 'organizer' && event.status === 'approved') {
       req.body.status = 'pending';
+    }
+
+    // Venue conflict check — use the incoming value if provided, otherwise
+    // fall back to the existing stored value so partial updates still work
+    const checkVenue = req.body.venue ?? event.venue;
+    const checkDate = req.body.date ?? event.date;
+    const checkStartTime = req.body.startTime ?? event.startTime;
+
+    if (checkVenue && checkDate && checkStartTime) {
+      const conflict = await checkVenueConflict(
+        checkVenue,
+        checkDate,
+        checkStartTime,
+        req.params.id  // exclude this event from its own conflict check
+      );
+      if (conflict) {
+        return ApiResponse.badRequest(
+          res,
+          `Venue "${checkVenue}" is already booked at ${checkStartTime} on this date`
+        );
+      }
     }
 
     event = await Event.findByIdAndUpdate(req.params.id, req.body, {
