@@ -1,6 +1,6 @@
 # 🎪 CampusEvents — Campus Event Management & Ticketing System
 
-A centralized platform for campus event management where students can discover events, register, and obtain digital tickets with QR codes. Organizers can create events, manage participants, and scan QR codes for check-in. Admins can approve events, manage users, and view analytics.
+A centralized platform for campus event management where students can discover events, register, and obtain digital tickets with QR codes. Organizers can create events, manage participants, and scan QR codes for check-in. Admins can approve events, manage users, and view analytics. 
 
 ## ✨ Features
 
