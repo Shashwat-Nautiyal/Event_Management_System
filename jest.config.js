@@ -1,1 +1,1 @@
-module.exports = { setupFilesAfterEnv: ["<rootDir>/tests/unit/setup.js"], testEnvironment: "node", testTimeout: 10000 };
+module.exports = { setupFilesAfterEnv: ["<rootDir>/tests/setup.js"], testEnvironment: "node", testTimeout: 10000 };

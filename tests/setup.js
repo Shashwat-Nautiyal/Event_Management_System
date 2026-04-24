@@ -1,5 +1,5 @@
 // Use the server's mongoose instance to ensure the same connection is shared with the app
-const mongoose = require('../../server/node_modules/mongoose');
+const mongoose = require('../server/node_modules/mongoose');
 
 // Mock uuid to fix Jest ESM import error
 jest.mock('uuid', () => ({
